@@ -155,8 +155,8 @@ def maskcut_forward(feats, dims, scales, init_image_size, tau=0, N=3, cpu=False)
 
     return seed, bipartitions, eigvecs
 
-def maskcut(img_path, backbone,patch_size, tau, N=1, fixed_size=480, cpu=False) :
-    I = Image.open(img_path).convert('RGB')
+def maskcut(image: Image, backbone,patch_size, tau, N=1, fixed_size=480, cpu=False) :
+    I = image.convert('RGB')
     bipartitions, eigvecs = [], []
 
     I_new = I.resize((int(fixed_size), int(fixed_size)), PIL.Image.LANCZOS)

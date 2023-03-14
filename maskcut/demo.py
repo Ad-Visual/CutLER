@@ -68,7 +68,7 @@ if __name__ == "__main__":
     if not args.cpu:
         backbone.cuda()
 
-    bipartitions, _, I_new = maskcut(args.img_path, backbone, args.patch_size, args.tau, \
+    bipartitions, _, I_new = maskcut(Image.open(args.image_path), backbone, args.patch_size, args.tau, \
         N=args.N, fixed_size=args.fixed_size, cpu=args.cpu)
 
     I = Image.open(args.img_path).convert('RGB')

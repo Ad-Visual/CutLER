@@ -2,6 +2,7 @@
 # Installation
 
 ## Requirements
+
 - Linux or macOS with Python ≥ 3.8
 - PyTorch ≥ 1.8 and [torchvision](https://github.com/pytorch/vision/) that matches the PyTorch installation.
   Install them together at [pytorch.org](https://pytorch.org) to make sure of this. 
@@ -14,7 +15,7 @@
 ```bash
 conda create --name cutler python=3.8 -y
 conda activate cutler
-conda install pytorch==1.8.1 torchvision==0.9.1 torchaudio==0.8.1 -c pytorch
+conda install pytorch==1.8.1 torchvision==0.9.1 torchaudio==0.8.1 faiss-gpu==1.7.2 -c pytorch
 pip install git+https://github.com/lucasb-eyer/pydensecrf.git
 
 # under your working directory
